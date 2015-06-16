@@ -5,7 +5,7 @@ Date Created: 6/8/15
 Description: A simple program to demonstrate the quicksort algorithm in C++
 Dependencies: randomIntArray.cpp, randomIntArray.h
 *************************************************/
-I. Bugs
+I. Bugs Encountered
 	- none
 
 II. Run Instructions

@@ -1,7 +1,5 @@
 <?php 
 
-
-
 $myrandomarray = new randomArray(100);
 
 $myrandomarray->printArray();
@@ -9,7 +7,6 @@ $myrandomarray->printArray();
 $myrandomarray->quicksort();
 
 $myrandomarray->printArray();
-
 
 /*** CLASS ***/
 
@@ -89,14 +86,8 @@ class randomArray
 			{
 				quicksortHelper($arr, $l, $right);
 			}
-
 		}
-
 		quicksortHelper($this->nums, 0, count($this->nums)-1);
-	}
-
-	
+	}	
 }	#END class randomArray
-
-
 ?>
