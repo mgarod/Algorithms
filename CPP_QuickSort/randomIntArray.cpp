@@ -101,32 +101,3 @@ void randomIntArray::quickhelp(int left, int right)
     if (i < right)
         quickhelp(i, right);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
