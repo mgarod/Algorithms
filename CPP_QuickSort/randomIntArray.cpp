@@ -56,17 +56,7 @@ void randomIntArray::quicksort()
     quickhelp(0, my_array_size-1);
 }
 
-void randomIntArray::insertionsort()
-{
-    
-}
-
 ///////////////////////////////////////////////////
-
-void swap(int& a, int& b)
-{
-
-}
 
 void randomIntArray::quickhelp(int left, int right)
 {
