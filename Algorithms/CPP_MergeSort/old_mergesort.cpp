@@ -34,14 +34,10 @@ void fillArray(int a[], int a_size)
     {
         a[i] = rand() % 1000;
     }
-}
-
-void mergehelp(int a[], int l, int m, int r)
+}void mergehelp(int a[], int l, int m, int r)
 {
     const int n1 = m - l + 1;
     const int n2 = r - m;
-    //printf("n1 is %d and n2 is %d\n", n1, n2);
-    
     
     int left[n1], right[n2];
     

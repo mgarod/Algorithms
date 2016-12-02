@@ -1,11 +1,5 @@
-#include <iostream>
-using namespace std;
-
-void printArray(int arr[], const int SIZE);
-void printArray(const std::unique_ptr<int[]>& arr, const int SIZE);
-
 void merge(int arr[], int low, int mid, int high) {
-  const int aSIZE = (mid - low+1);
+  const int aSIZE = (mid - low + 1);
   const int bSIZE = (high - mid);
 
   std::unique_ptr<int[]> a(new int[aSIZE]);
@@ -29,7 +23,7 @@ void mergesort(int arr[], int lo, int hi) {
   if (lo < hi) {
     int mid = ((hi - lo) >> 1) + lo;
     mergesort(arr, lo, mid);
-    mergesort(arr, mid+1, hi);
+    mergesort(arr, mid + 1, hi);
     merge(arr, lo, mid, hi);
   }
 }

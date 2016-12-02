@@ -3,21 +3,20 @@
 using namespace std;
 
 class TrieNode {
-public:
-    // Initialize your data structure here.
+  public:
     TrieNode() : isWord(false) { }
     bool hasNextChar(char c) { return nextChar.count(c); };
     bool isValidWord() { return isWord; };
     void setIsWord() { isWord = true; };
     void set(char c) { nextChar[c] = new TrieNode(); };
     TrieNode* get(char c) { return nextChar[c]; };
-private:
+  private:
     bool isWord;
     unordered_map<char, TrieNode*> nextChar;
 };
 
 class Trie {
-public:
+  public:
     Trie() {
         root = new TrieNode();
     }
@@ -35,43 +34,38 @@ public:
 
     // Returns if the word is in the trie.
     bool search(string word) {
-        TrieNode* n = root;
-        for (int i = 0; i < word.length(); ++i) {
-            if (n->hasNextChar(word[i])) {
-                n = n->get(word[i]);
-            } else {
-                return false;
-            }
+      TrieNode* n = root;
+      for (int i = 0; i < word.length(); ++i) {
+        if (n->hasNextChar(word[i])) {
+          n = n->get(word[i]);
+        } else {
+          return false;
         }
-        
-        if (n->isValidWord())
-            return true;
-        else
-            return false;
+      }
+      if (n->isValidWord())
+        return true;
+      else
+        return false;
     }
 
     // Returns if there is any word in the trie
     // that starts with the given prefix.
     bool startsWith(string prefix) {
-        TrieNode* n = root;
-        for (int i = 0; i < prefix.length(); ++i) {
-            if (n->hasNextChar(prefix[i])) {
-                n = n->get(prefix[i]);
-            } else {
-                return false;
-            }
+      TrieNode* n = root;
+      for (int i = 0; i < prefix.length(); ++i) {
+        if (n->hasNextChar(prefix[i])) {
+          n = n->get(prefix[i]);
+        } else {
+          return false;
         }
-        return true;
+      }
+      return true;
     }
 
-private:
+  private:
     TrieNode* root;
 };
 
-// Your Trie object will be instantiated and called as such:
-// Trie trie;
-// trie.insert("somestring");
-// trie.search("key");
 int main() {
   Trie t;
   t.insert("app");
